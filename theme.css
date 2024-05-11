@@ -1,0 +1,215 @@
+:root{
+/*~~~< Font >~~~*/
+  --default-font: "Sans serif", "Arial";
+/*~~~< Heading size >~~~*/
+  --h6size: 1.2em;
+}
+
+/*~~~< Dark mode >~~~*/
+.theme-dark{
+
+/*~~~< The fantastic four >~~~*/
+  --bg: rgb(25, 22, 22);
+  --text: rgb(252, 242, 252);
+  --text-muted: color-mix(in srgb, var(--text) 70%, var(--bg) 30%);
+  --primary_x: 250, 50, 122;
+  --secondary_x: 173, 92, 200;
+
+/*~~~< Default accent color >~~~*/
+  --accent-h: 204; /* default color */
+  --accent-s: 52%;
+  --accent-l: 59%;
+
+  --default_hsl: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
+
+/*~~~< Background colors >~~~*/
+  --bg_dark: color-mix(in srgb, var(--bg) 80%, black 20%);
+  --bg_dark_dark: color-mix(in srgb, var(--bg) 60%, black 40%);
+  --bg_light: color-mix(in srgb, var(--bg) 80%, white 10%);
+  --bg_light_light: color-mix(in srgb, var(--bg) 80%, white 20%);
+  
+  --code-background: var(--bg_light);
+
+/*~~~< Primary and secodary color, with gradients in between >~~~*/
+  --primary: rgb(var(--primary_x));
+  --secondary: rgb(var(--secondary_x));
+  --transition1: color-mix(in srgb, var(--primary) 80%, var(--secondary) 20%);
+  --transition2: color-mix(in srgb, var(--primary) 60%, var(--secondary) 40%);
+  --transition3: color-mix(in srgb, var(--primary) 40%, var(--secondary) 60%);
+  --transition4: color-mix(in srgb, var(--primary) 20%, var(--secondary) 80%);
+
+/*~~~< Highlight, bold, italic >~~~*/
+  --highlight: rgba(var(--primary_x), 40%);
+  --italic: color-mix(in srgb, var(--secondary) 60%, var(--text) 40%);
+  --bold: color-mix(in srgb, var(--secondary) 60%, var(--text) 40%);
+  
+  --invert-amount: 0.8
+  ;
+}
+
+/*~~~< Light mode >~~~*/
+.theme-light{
+
+/*~~~< The fantastic four >~~~*/
+  --bg: rgb(251, 245, 234);
+  --text: rgb(34, 34, 140);
+  --text-muted: color-mix(in srgb, var(--text) 70%, var(--bg) 30%);
+  --primary_x: 100, 100, 230;
+  --secondary_x: 14, 14, 130;
+  
+/*~~~< Default accent color >~~~*/
+  --accent-h: 195; /* default color */
+  --accent-s: 52%;
+  --accent-l: 59%;
+  --default_hsl: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
+
+/*~~~< Background colors >~~~*/
+  --bg_dark: color-mix(in srgb, var(--bg) 50%, var(--bg_dark_dark) 50%);
+  --bg_dark_dark: color-mix(in srgb, var(--bg) 60%, rgb(235, 214, 203) 40%);
+  --bg_light: color-mix(in srgb, var(--bg) 80%, AntiqueWhite 10%);
+  --bg_light_light: color-mix(in srgb, var(--bg) 80%, AntiqueWhite 20%);
+  
+  --code-background: var(--bg_dark);
+
+/*~~~< Primary and secodary color, with gradients in between >~~~*/
+  --primary: rgb(var(--primary_x));
+  --secondary: rgb(var(--secondary_x));
+  --transition1: color-mix(in srgb, var(--primary) 80%, var(--secondary) 20%);
+  --transition2: color-mix(in srgb, var(--primary) 60%, var(--secondary) 40%);
+  --transition3: color-mix(in srgb, var(--primary) 40%, var(--secondary) 60%);
+  --transition4: color-mix(in srgb, var(--primary) 20%, var(--secondary) 80%);
+
+/*~~~< Highlight, bold, italic >~~~*/
+  --highlight: rgba(var(--primary_x), 40%);
+  --italic: color-mix(in srgb, var(--secondary) 60%, var(--text) 40%);
+  --bold: color-mix(in srgb, var(--secondary) 60%, var(--text) 40%);
+  
+  --invert-amount: 0.8;
+}
+
+.theme-light,
+.theme-dark{
+
+    --background-primary: var(--bg);
+    --background-primary-alt: var(--bg_dark_dark);	
+    --background-secondary: var(--bg_dark);
+    --background-secondary-alt: var(--bg_dark);
+
+	/*
+  --h1-color: var(--primary);
+  --h2-color: var(--transition1);
+  --h3-color: var(--transition2);
+  --h4-color: var(--transition3);
+  --h5-color: var(--transition4);
+  --h6-color: var(--secondary);
+	*/
+	
+  --text-highlight-bg: var(--highlight);
+  --text-highlight-fg: var(--bg);
+  --bold-color: var(--bold);
+  --italic-color: var(--italic);
+
+  --text-normal: var(--text);
+  --link-color: color-mix(in srgb, var(--default_hsl) 80%, var(--text) 20%);
+  --link-external-color: color-mix(in srgb, var(--default_hsl) 80%, var(--text) 20%);
+  --nav-item-color: var(--text);
+  
+  --table-header-background: var();
+  --table-header-background-hover: var(--bg_light_light);
+  --table-row-alt-background: var(--bg_dark);
+  --table-row-background-hover: var(--bg_light_light);
+  
+  --titlebar-background: var(--bg_dark_dark);
+  --titlebar-background-focused: var(--bg_dark);
+  
+  --icon-color-focused: var(--default_hsl);
+  
+  --ribbon-background-collapsed: var(--bg_dark_dark);
+  --ribbon-background: var(--bg_dark_dark);
+  
+  --p-spacing: 0.7rem; /* paragraph spaceing */
+
+  --divider-width-hover: 5px;
+  --divider-color: transparent;
+  --divider-width: 5px;
+}
+
+/*~~~< Heading size >~~~*/
+h1{font-size: calc(var(--h6size)*1.40) !important;}
+h2{font-size: calc(var(--h6size)*1.32) !important;}
+h3{font-size: calc(var(--h6size)*1.24) !important;}
+h4{font-size: calc(var(--h6size)*1.16) !important;}
+h5{font-size: calc(var(--h6size)*1.08) !important;}
+h6{font-size: calc(var(--h6size)*1.00) !important;}
+
+/*~~~< Line before heading and colores >~~~*/
+/*
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before{
+	content: "";
+	border-style: solid;
+	border-width: 0.15rem;
+	border-radius: var(--radius-s)!important;
+	margin-right: 0.25em;
+}
+
+h1::before{border-color:var(--primary);}
+h2::before{border-color:var(--transition1);}
+h3::before{border-color:var(--transition2);}
+h4::before{border-color:var(--transition3);}
+h5::before{border-color:var(--transition4);}
+h6::before{border-color:var(--secondary);}
+*/
+
+/*~~~< Border on focused icon >~~~*/
+div.workspace-tab-header.is-active:not(body > div.app-container > div.horizontal-main-container > div > div.workspace-split.mod-vertical.mod-root > div > div.workspace-tab-header-container > div.workspace-tab-header-container-inner > div){
+  border-color: var(--default_hsl);
+  border-style: solid;
+  border-width: 1px;
+}
+
+/*~~~< Mathjax/Latex >~~~*/
+mjx-math {
+  font-size: 110% !important;
+  color: color-mix(in srgb, var(--default_hsl) 20%, var(--text) 80%);
+}
+
+/*~~~< For mobile >~~~*/
+.is-mobile{
+  --file-line-width: 100vw;
+}
+
+/*~~~< List numbers recolor >~~~*/
+.list-number {
+    color: var(--text-normal);
+}
+
+ol > :nth-child(10n + 1)::marker {
+    color: var(--primary) !important;
+}
+ol > :nth-child(10n + 2)::marker {
+    color: var(--transition1) !important;
+}
+ol > :nth-child(10n + 3)::marker {
+    color: var(--transition2) !important;
+}
+ol > :nth-child(10n + 4)::marker {
+    color: var(--transition3) !important;
+}
+ol > :nth-child(10n + 5)::marker {
+    color: var(--transition4) !important;
+}
+ol > :nth-child(10n + 6)::marker {
+    color: var(--secondary) !important;
+}
+ol > :nth-child(10n + 7)::marker {
+    color: var(--transition4) !important;
+}
+ol > :nth-child(10n + 8)::marker {
+    color: var(--transition3) !important;
+}
+ol > :nth-child(10n + 9)::marker {
+    color: var(--transition2) !important;
+}
+ol > :nth-child(10n + 10)::marker {
+    color: var(--transition1) !important;
+}
